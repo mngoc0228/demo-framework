@@ -9,6 +9,8 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions
 
 class TestSampleSelenium (TestBase):
+    @pytest.mark.login_test
+    @pytest.mark.smoke
     def test_login(self):
         login_page = LoginPage(self.driver)
         login_page.get_email().send_keys("demo@evershop.io")

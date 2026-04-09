@@ -18,3 +18,11 @@
 ```
 - uv run main.py || uv run example.py
 ```
+
+# Note test case
+```
+[tool.pytest.ini_options]
+markers = [
+    "login_test: đánh dấu các test case liên quan đến chức năng login",
+]
+```

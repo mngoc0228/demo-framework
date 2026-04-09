@@ -10,6 +10,7 @@ class LoginPage:
     email = (By.XPATH, "//input[@type='email']")
     password = (By.XPATH,"//input[@type='password']")
     login_button = (By.XPATH,"//button[@type='submit']")
+    toast_error_msg = (By.XPATH,"//div[@class='Toastify__toast Toastify__toast--error']")
 
     def get_email(self):
         return self.driver.find_element(*LoginPage.email)
@@ -19,3 +20,6 @@ class LoginPage:
     
     def get_button(self):
         return self.driver.find_element(*LoginPage.login_button)
+
+    def get_toast_error_msg(self):
+        return self.driver.find_element(*LoginPage.toast_error_msg)
